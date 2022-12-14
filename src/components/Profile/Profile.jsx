@@ -1,8 +1,8 @@
 import { ProfileCard, Description, Avatar } from "./Profile.styled";
 import PropTypes from "prop-types";
-import user from '../../'
 
-export const Profile = ({ username, tag, location, avatar, followers, views, likes }) => {
+
+export const Profile = () => {
     return (
         <ProfileCard>
             <Description>
