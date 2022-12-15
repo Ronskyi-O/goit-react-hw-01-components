@@ -1,5 +1,6 @@
-import { ProfileCard, Description, Avatar } from "./Profile.styled";
+import { ProfileCard, Description, Avatar, Name, Tag, Location, Stats, StatsItem, StatLabel, StatQuantity } from "./Profile.styled";
 import PropTypes from "prop-types";
+
 
 
 export const Profile = () => {
@@ -10,25 +11,25 @@ export const Profile = () => {
                     src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
                     alt=" "
                 />
-                {/* <p class="name">Petra Marica</p>
-                <p class="tag">@pmarica</p>
-                <p class="location">Salvador, Brasil</p> */}
+                <Name>Petra Marica</Name>
+                <Tag>@pmarica</Tag>
+                <Location>Salvador, Brasil</Location>
             </Description>
 
-            {/* <ul class="stats">
-                <li>
-                    <span class="label">Followers</span>
-                    <span class="quantity">1000</span>
-                </li>
-                <li>
-                    <span class="label">Views</span>
-                    <span class="quantity">2000</span>
-                </li>
-                <li>
-                    <span class="label">Likes</span>
-                    <span class="quantity">3000</span>
-                </li>
-            </ul> */}
+            <Stats>
+                <StatsItem>
+                    <StatLabel>Followers</StatLabel>
+                    <StatQuantity>1000</StatQuantity>
+                </StatsItem>
+                <StatsItem>
+                    <StatLabel>Views</StatLabel>
+                    <StatQuantity>2000</StatQuantity>
+                </StatsItem>
+                <StatsItem>
+                    <StatLabel>Likes</StatLabel>
+                    <StatQuantity>3000</StatQuantity>
+                </StatsItem>
+            </Stats>
         </ProfileCard>
     )
 }
