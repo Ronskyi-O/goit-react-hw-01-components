@@ -1,48 +1,53 @@
 import { ProfileCard, Description, Avatar, Name, Tag, Location, Stats, StatsItem, StatLabel, StatQuantity } from "./Profile.styled";
 import PropTypes from "prop-types";
 
-
-
-export const Profile = () => {
+export const Profile = ({ user }) => {
+    const { username, tag, location, avatar, stats } = user;
     return (
         <ProfileCard>
             <Description>
                 <Avatar
-                    src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
-                    alt=" "
+                    src={avatar}
+                    alt={username}
                 />
-                <Name>Petra Marica</Name>
-                <Tag>@pmarica</Tag>
-                <Location>Salvador, Brasil</Location>
+                <Name>{username}</Name>
+                <Tag>@{tag}</Tag>
+                <Location>{location}</Location>
             </Description>
 
             <Stats>
                 <StatsItem>
                     <StatLabel>Followers</StatLabel>
-                    <StatQuantity>1000</StatQuantity>
+                    <StatQuantity>{stats.followers}</StatQuantity>
                 </StatsItem>
                 <StatsItem>
                     <StatLabel>Views</StatLabel>
-                    <StatQuantity>2000</StatQuantity>
+                    <StatQuantity>{stats.views}</StatQuantity>
                 </StatsItem>
                 <StatsItem>
                     <StatLabel>Likes</StatLabel>
-                    <StatQuantity>3000</StatQuantity>
+                    <StatQuantity>{stats.likes}</StatQuantity>
                 </StatsItem>
             </Stats>
         </ProfileCard>
     )
 }
 
-
 Profile.propTypes = {
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
+    user: PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        tag: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        stats: PropTypes.shape({
+            followers: PropTypes.number.isRequired,
+            views: PropTypes.number.isRequired,
+            likes: PropTypes.number.isRequired,
+        })
+    })
 }
+
+
+
 
 

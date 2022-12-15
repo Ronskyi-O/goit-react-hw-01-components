@@ -9,8 +9,8 @@ border: 1px solid grey;
 
 export const Description = styled.div`
    padding-top: 40px;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-right: 70px;
+  padding-left: 70px;
   padding-bottom: 40px;
   text-align: center;
   background-color: white;
