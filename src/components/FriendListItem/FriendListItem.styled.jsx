@@ -14,12 +14,20 @@ export const Friend = styled.li`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
-export const Status = styled.span`
+export const StatusOnline = styled.span`
   width: 20px;
   height: 20px;
-  border-color: green;
   border-radius: 50%;
   margin-right: 15px;
+  background-color: green;
+`;
+
+export const StatusOffline = styled.span`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: red;
 `;
 
 export const Avatar = styled.img`
