@@ -5,6 +5,7 @@ export const StatisticsCard = styled.section`
   border-radius: 5px;
   width: 300px;
   background-color: white;
+  margin-bottom: 20px;
 `
 
 export const StatisticsTitle = styled.h2`
@@ -43,7 +44,7 @@ export const StatisticsItem = styled.li`
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #fff;
-  background-color: red;
+ 
 `
 
 export const ItemLabel = styled.span`
