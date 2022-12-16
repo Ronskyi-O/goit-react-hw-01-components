@@ -18,6 +18,7 @@ font-size: 16px;
 export const TableHeadCell = styled.th`
 width: 100px;
   padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35)
 `;
 
 export const TableBodyCell = styled.td`

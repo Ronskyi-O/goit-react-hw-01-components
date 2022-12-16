@@ -30,6 +30,8 @@ export const StatusOffline = styled.span`
   background-color: red;
 `;
 
+
+
 export const Avatar = styled.img`
   width: 48px
   border-radius: 10px;
